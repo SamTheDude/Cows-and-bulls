@@ -6,8 +6,10 @@ import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class Main extends Application {
@@ -19,16 +21,18 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 300, 350));
         primaryStage.show();
 
-        GridPane InputArea = new GridPane();
-        InputArea.setPadding(new Insets(10, 10, 10, 10));
-        InputArea.setVgap(5);
-        InputArea.setHgap(5);
-
+        JFrame InputFrame = new JFrame();
         TextField Input = new TextField();
         Input.setText("0000");
         Input.setColumns(4);
         Input.enableInputMethods(true);
-        Input.show();
+        InputFrame.setBounds(10, 10, 200, 200);
+        InputFrame.add(Input);
+        InputFrame.setVisible(true);
+
+        Button Submit = new Button();
+        Frame f = new Frame();
+        f.add(Submit);
     }
 
 
